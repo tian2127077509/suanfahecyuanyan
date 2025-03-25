@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main(){
+    const char *c_pattern[]={
+        "*********",
+        "*",
+        "*",
+        "*********"
+    };
+    printf("用*输出字母C\n");
+    //循环变量sizeof(C_pattern)意思为数组总体大小，表达式的意思为总体大小除以单个元素大小，可以得出最终的循环次数
+    //循环一次得出一个字符串，四次完成打印
+    for(int i=0; i<sizeof(c_pattern)/sizeof(c_pattern[0]);i++){
+        printf("%s\n",c_pattern[i]);
+    }
+    return 0;
+
+}
